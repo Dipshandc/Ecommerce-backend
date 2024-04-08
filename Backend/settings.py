@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+
 from datetime import timedelta
 
 from django.conf import settings
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'likes',
     'rest_framework',
     'djoser',
     'rest_framework_simplejwt',
@@ -89,7 +91,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Backend.wsgi.application'
 
 
-AUTH_USER_MODEL = "core.User"
+# AUTH_USER_MODEL = "core.User"
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
