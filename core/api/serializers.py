@@ -2,19 +2,9 @@ from rest_framework.serializers import ModelSerializer
 from rest_framework import serializers
 from ..models import *
 
-class ProductSerializer(ModelSerializer):
-  class Meta:
-    model = Product
-    fields = ['name','description','price']
 
-class CartSerializer(ModelSerializer):
+class CustomerSerializer(ModelSerializer):
   class Meta:
-    model = Cart
-    fields = ['user','items']
+    model = Customer
+    fields =['user','first_name','last_name','email','phone','birth_date']
 
-class CartItemSerializer(ModelSerializer):
-  class Meta:
-    model = CartItem
-    fields = ['cart','product','quantity']
-    product = ProductSerializer
-   
