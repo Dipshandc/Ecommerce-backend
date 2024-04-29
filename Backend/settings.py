@@ -51,11 +51,7 @@ INSTALLED_APPS = [
     "corsheaders",
 ]
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
-}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -212,3 +208,10 @@ DEFAULT_FROM_EMAIL = 'from@carrental.com'
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
 ]
+
+REST_FRAMEWORK = {
+    'PAGE_SIZE': 10,
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}

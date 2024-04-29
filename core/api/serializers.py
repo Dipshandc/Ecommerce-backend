@@ -8,3 +8,7 @@ class CustomerSerializer(ModelSerializer):
     model = Customer
     fields =['user','first_name','last_name','email','phone','birth_date']
 
+class ProductSerializer(ModelSerializer):
+  class  Meta:
+    model = Product
+    fields = ['title','description','price','inventory','last_update']
