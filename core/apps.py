@@ -8,7 +8,7 @@ class CoreConfig(AppConfig):
 
 
     def ready(self):
-        from .signals import create_customer , save_customer
+        from .singnals.handlers import create_customer , save_customer
 
         from django.contrib.auth.models import User
         from django.db.models.signals import post_save
