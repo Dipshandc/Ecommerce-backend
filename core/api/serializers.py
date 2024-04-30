@@ -12,8 +12,3 @@ class ProductSerializer(ModelSerializer):
   class  Meta:
     model = Product
     fields = ['title','description','price','inventory','last_update']
-
-class CartSerializer(ModelSerializer):
-  class Meta:
-    model = Cart
-    fields = ['id']
