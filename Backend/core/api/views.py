@@ -45,8 +45,6 @@ class ProductViewSet(ModelViewSet):
     serializer_class = ProductSerializer
     pagination_class = PageNumberPagination
 
-
-
 # class ProductView(APIView):
 #     def get(self,request):
 #         queryset = Product.objects.all()
@@ -62,3 +60,12 @@ class ProductViewSet(ModelViewSet):
 #             return Response(serializer.data,status=status.HTTP_400_BAD_REQUEST)
 
 
+
+class Cart(APIView):
+    def post(self,request):
+        serializer = CartSerializer(data=request.data)
+        if serializer.is_valid:
+            serializer.save
+            return Response(serializer.data,status=status.HTTP_201_CREATED)
+        else:
+           return Response(serializer.data,status=status.HTTP_400_BAD_REQUEST)
